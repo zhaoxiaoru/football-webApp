@@ -1,0 +1,57 @@
+<html>
+    
+    <head>
+        <title>hotkey configuration</title>
+        <script src="../lib/jquery.js"></script>
+        <style>body{-webkit-user-select:none}form{margin-bottom:0}input[type=text]{width:480px;border:1px solid #ccc;height:22px;line-height:18px;padding:2px 10px;outline:0;font-size:14px;border-radius:5px}table{width:100%;font-size:14px}table tr{height:30px}span.desc{white-space:pre;color:#8F908A}</style>
+    </head>
+    
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td style="width:65px"><!--{lan:search.findContent}--></td>
+                    <td><input type="text" name="find_con" autocomplete="on"></td>
+                </tr>
+                <tr>
+                    <td><!--{lan:search.options}--></td>
+                    <td>
+                        <label><input type="checkbox" name="reg_tag"><!--{lan:search.regularExpression}--></label>
+                        <span class="desc">     <!--{lan:search.regTip}--> ( eg. "this\.show\(\)" )</span><br>
+                        <label><input type="checkbox" name="case_tag"><!--{lan:search.casesensitive}--></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><!--{lan:search.replaceContent}--></td>
+                    <td><input type="text" name="replace_con"></td>
+                </tr>
+                <tr>
+                    <td><!--{lan:search.type}--></td>
+                    <td><input type="text" name="type"></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="desc"><!--{lan:search.typeTip}--> ( eg. "js php html" )</span></td>
+                </tr>
+                <tr>
+                    <td><!--{lan:search.exclude}--></td>
+                    <td><input type="text" name="exclude" value="node_modules"></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="desc"><!--{lan:search.excludeTip}--> ( eg. "node_modules" )</span></td>
+                </tr>
+                <tr>
+                    <td><!--{lan:search.path}--></td>
+                    <td>
+                        <input type="text" readonly="readonly" name="path" style="width:445px;font-size:12px" _original="<!--{path}-->" value="<!--{path}-->">
+                        <input type="button" id="pathBtn" style="margin:0;height:26px;line-height:26px" value="...">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script>function returnData(){var e={status:!0,msg:""};return e}$(document).ready(function(){function e(){$(".fileOpener").remove();var e="file_"+(new Date).getTime(),t=$('input[name="path"]').val()?$('input[name="path"]').val():path;$(document.body).append('<input style="display:none;" nwdirectory nwworkingdir="'+t+'" class="fileOpener" type="file" id='+e+" />"),setTimeout(function(){$("#"+e).click()},10),$("#"+e).change(function(){var t=$("#"+e).val(),n=$('input[name="path"]').attr("_original");t.slice(0,n.length)!=n?$('input[name="path"]').val(n):$('input[name="path"]').val(t)})}if($("#pathBtn").bind("click",function(){e()}),$("form").keydown(function(e){13==e.keyCode&&(parent._dg122.loadSettingPage.instance.ext.findClick.call(parent._dg122.loadSettingPage.instance),e.preventDefault(),e.stopPropagation())}),setTimeout(function(){$('input[name="find_con"]')[0].focus(),$('input[name="find_con"]')[0].select()},100),localStorage.search_history){var t,n=JSON.parse(localStorage.search_history);for(var a in n)t=$('input[name="'+a+'"]'),"checkbox"==t.attr("type")?t[0].checked=n[a]:"text"==t.attr("type")&&t.val(n[a]);n.path.slice(0,path.length)!=path&&$('input[name="path"]').val(path)}}),window.dgBridge={getParams:function(){var e={find_con:$('input[name="find_con"]').val(),reg_tag:$('input[name="reg_tag"]')[0].checked,case_tag:$('input[name="case_tag"]')[0].checked,replace_con:$('input[name="replace_con"]').val(),type:$('input[name="type"]').val().trim(),exclude:$('input[name="exclude"]').val().trim(),path:$('input[name="path"]').val()},t=e.find_con;e.reg_tag||(t=t.replace(/[^0-9a-zA-Z]/g,function(e){return"\\"+e}));try{new RegExp(t)}catch(n){return alert(parent.lanObject.search.invalidReg),!1}return localStorage.search_history=JSON.stringify(e),e}}</script>
+        <script src="../lib/template.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,17 @@
+<html>
+    
+    <head>
+        <title>Update</title>
+        <script src="../lib/jquery.js"></script>
+        <style>body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#777}h3 a{padding-left:10px}ul{list-style-type:decimal}ul li{margin-bottom:10px}</style>
+    </head>
+    
+    <body>
+        <div>
+            <h3></h3>
+            <ul></ul>
+        </div>
+        <script>function open(){var a=data.url?data.url:"http://www.debuggap.com";parent.gui.Shell.openExternal(a)}$("h3").html('New Release:<a href="javascript:open()">'+data.version+"</a>");for(var str=[],i=0;i<data.desc.length;i++)str.push("<li>",data.desc[i],"</li>");$("ul").html(str.join(""))</script>
+    </body>
+
+</html>

@@ -1,0 +1,1 @@
+process.on("message",function(s){function c(s){process.send(s)}try{var e,n=s.source,r=require("./"+n.src+".js"),p=s.params;s.sync?(e=r[n.func].apply(null,p),process.send(e)):(p.push(c),r[n.func].apply(null,p))}catch(u){process.send({success:0,msg:u.message})}});

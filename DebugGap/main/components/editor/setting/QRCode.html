@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>UI configuration</title>
+        <script src="../lib/jquery.js"></script>
+        <script src="../lib/qr.min.js"></script>
+        <style>textarea{width:100%;height:100px;padding:7px;resize:none;font-size:14px;color:#000;border:1px solid #ababab;overflow:hidden;overflow-y:auto;outline:0}.code{margin-top:50px;height:400px;overflow:hidden}.code_seperate{float:left;width:49%;height:315px}.big{width:300px;height:300px;padding-left:86px}.small{width:200px;height:200px;margin-left:137px;margin-top:50px}img{width:100%;height:100%}</style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div><textarea autocomplete="off" placeholder="Enter URL here">http://www.debuggap.com</textarea></div>
+            <div class="code">
+                <div class="code_seperate"><div class="big"><img></div></div>
+                <div class="code_seperate"><div class="small"><img></div></div>
+            </div>
+        </div>
+        <script>function show_code(){var e=$("textarea").val();e||(e="http://www.debuggap.com"),qr.image({image:$(".big img")[0],value:e,size:10}),qr.image({image:$(".small img")[0],value:e,size:4})}function returnData(){var e={status:!0,msg:""};return e}show_code(),$("textarea").bind("keyup",function(){show_code()}),$("textarea").bind("click",function(){this.select()})</script>
+    </body>
+
+</html>

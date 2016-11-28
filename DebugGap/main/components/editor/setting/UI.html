@@ -1,0 +1,15 @@
+<html>
+    
+    <head>
+        <title>UI configuration</title>
+        <script src="../lib/jquery.js"></script>
+        <style>.ui-lists{-webkit-user-select:none;width:946px}.ui-lists pre{font-size:12px}ul{float:left;margin:0;padding:0;margin-top:30px;margin-left:15px}li{float:left;width:280px;height:300px;list-style-type:none;border:1px solid #ccc;border-radius:5px;margin-right:20px;padding:5px;cursor:pointer}li:hover{-webkit-transform:scale(1.1);-webkit-transition:-webkit-transform .2s}li.monokai{background-color:#272822;color:#F8F8F2}.monokai .ele{color:#F92672}.monokai .var{color:#A6E22E}.monokai .func{color:#66D9EF}.monokai .str{color:#E6DB74}li.sky-blue{background-color:#FFF;color:#000}.sky-blue .ele{color:#930f80}.sky-blue .var{color:#318495}.sky-blue .func{color:#3c4c72}.sky-blue .str{color:#1A1AA6}li.fresh{background-color:#d3eff9;color:#000}.fresh .ele{color:#930f80}.fresh .var{color:#318495}.fresh .func{color:#3c4c72}.fresh .str{color:#1A1AA6}.active{position:relative}.active:after{content:'Active';width:60px;position:absolute;left:50%;text-align:center;margin-left:-30px;top:50%;border:1px solid #c60;border-radius:10px}</style>
+    </head>
+    
+    <body>
+        <ul class="ui-lists">
+        </ul>
+        <script>function returnData(){var s={status:!0,msg:""};return s}for(var config=parent._dg122.getConfig("UI"),theme=-1!=$.inArray(config.theme,["sky-blue","fresh","monokai"])?config.theme:"sky-blue",arr=["Sky-Blue","Fresh","Monokai"],str=[],i=0;i<arr.length;i++)str.push('<li class="',theme==arr[i].toLowerCase()?"active ":"",arr[i].toLowerCase(),'"><pre>\n'),str.push('&lt;<span class="ele">html</span>&gt;\n'),str.push('    &lt;<span class="ele">head</span>&gt;\n'),str.push('        &lt;<span class="ele">title</span>&gt;Theme:',arr[i],'&lt;/<span class="ele">title</span>&gt;\n'),str.push('    &lt;/<span class="ele">head</span>&gt;\n'),str.push('    &lt;<span class="ele">body</span>&gt;\n'),str.push('        &lt;<span class="ele">script</span>&gt;\n'),str.push('        <span class="var">document</span>.<span class="func">write</span>(<span class="str">"Hello World!"</span>);\n'),str.push('        &lt;/<span class="ele">script</span>&gt;\n'),str.push('    &lt;/<span class="ele">body</span>&gt;\n'),str.push('&lt;/<span class="ele">html</span>&gt;'),str.push("</pre></li>");$(".ui-lists").html(str.join("")),$(".ui-lists li").bind("click",function(){var s=arr[$(this).index()].toLowerCase();config.theme=s,parent._dg122.saveConfig("UI",config);var t=arr[$(".ui-lists li.active").removeClass("active").index()].toLowerCase();$(this).addClass("active"),parent.window.$("body").removeClass("theme-"+t).addClass("theme-"+config.theme)})</script>
+    </body>
+
+</html>

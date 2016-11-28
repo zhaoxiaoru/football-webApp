@@ -1,0 +1,15 @@
+<html>
+    
+    <head>
+        <title>Language Package</title>
+        <script src="../lib/jquery.js"></script>
+        <style>.ui-lists{-webkit-user-select:none}.ui-lists pre{font-size:12px}ul{overflow:auto;margin:0;padding:0;width:510px;padding:10px;white-space:nowrap}li{width:160px;height:160px;list-style-type:none;border:1px solid #ccc;border-radius:5px;margin:5px;padding:5px;cursor:pointer;text-align:center;display:inline-block;box-sizing:border-box}li:hover{-webkit-transform:scale(1.1);-webkit-transition:-webkit-transform .2s}.active{position:relative}.active:after{content:'Active';width:60px;position:absolute;left:50%;text-align:center;margin-left:-30px;top:50%;border:1px solid #c60;border-radius:10px}</style>
+    </head>
+    
+    <body>
+        <ul class="ui-lists">
+        </ul>
+        <script>function returnData(){var a={status:!0,msg:""};return a}var lan,str=[];for(lan in config)str.push('<li lan="',lan,'" class="',lan==localStorage.language?"active ":"",'">',config[lan],"</li>");$(".ui-lists").html(str.join("")),$(".ui-lists li").bind("click",function(){localStorage.language=$(this).attr("lan"),$(".ui-lists li").removeClass("active"),$(this).addClass("active"),alert(parent.lanObject.settingPage.languagePrompt)})</script>
+    </body>
+
+</html>

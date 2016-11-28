@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>UI configuration</title>
+        <script src="../lib/jquery.js"></script>
+        <style>textarea{width:100%;height:450px;padding:7px;resize:none;font-size:14px;color:#000;border:1px solid #ababab;overflow:hidden;overflow-y:auto;outline:0}.btns{padding:20px}.btns input{padding:6px 12px;margin-bottom:0;font-size:14px;text-align:center;cursor:pointer;-webkit-user-select:none;border:1px solid transparent;border-radius:4px;outline:0;color:#fff;background-color:#ccc}</style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div><textarea autocomplete="off" placeholder="Enter Content Here"></textarea></div>
+            <div class="btns">
+                <input type="button" value="Encode">
+                <input type="button" value="Decode" style="float:right">
+            </div>
+        </div>
+        <script>function returnData(){var t={status:!0,msg:""};return t}$(".btns input").bind("click",function(){var t=$("textarea").val();t=0==$(this).index()?encodeURIComponent(t):decodeURIComponent(t),$("textarea").val(t)})</script>
+    </body>
+
+</html>

@@ -1,0 +1,300 @@
+{
+    "1": {
+        "func": "newFile",
+        "global": 1,
+        "bindKey": {
+            "mac": "Command-n",
+            "win": "Ctrl-n"
+        }
+    },
+    "2": {
+        "func": "openFile",
+        "global": 1,
+        "bindKey": {
+            "mac": "Command-o",
+            "win": "Ctrl-o"
+        }
+    },
+    "3": {
+        "func": "openProject",
+        "global": 1,
+        "bindKey": {
+            "mac": "Command-p",
+            "win": "Ctrl-p"
+        }
+    },
+    "4": {
+        "func": "saveFile",
+        "bindKey": {
+            "mac": "Command-s",
+            "win": "Ctrl-s"
+        }
+    },
+    "5": {
+        "func": "saveAsFile",
+        "bindKey": {
+            "mac": "Shift-Command-s",
+            "win": "Shift-Ctrl-s"
+        }
+    },
+    "6": {
+        "desc": "setting",
+        "func": "showSettingsMenu",
+        "close": 0,
+        "default": 1,
+        "hidden": 1,
+        "bindKey": {
+            "mac": "",
+            "win": ""
+        }
+    },
+    "11": {
+        "func": "gotoline",
+        "global": 1,
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-l",
+            "mac": "Command-l"
+        }
+    },
+    "12": {
+        "func": "removeline",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-d",
+            "mac": "Command-d"
+        }
+    },
+    "13": {
+        "func": "duplicateSelection",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-Shift-d",
+            "mac": "Command-Shift-d"
+        }
+    },
+    "16": {
+        "func": "addCursorAbove",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-Alt-Up",
+            "mac": "Ctrl-Option-Up"
+        }
+    },
+    "17": {
+        "func": "addCursorBelow",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-Alt-Down",
+            "mac": "Ctrl-Alt-Down"
+        }
+    },
+    "18": {
+        "func": "copylinesdown",
+        "default": 1,
+        "bindKey": {
+            "win": "Alt-Shift-Down",
+            "mac": "Command-Option-Down"
+        }
+    },
+    "19": {
+        "func": "copylinesup",
+        "default": 1,
+        "bindKey": {
+            "win": "Alt-Shift-Up",
+            "mac": "Command-Option-Up"
+        }
+    },
+    "20": {
+        "func": "expandToMatching",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-Shift-m",
+            "mac": "Ctrl-Shift-m"
+        }
+    },
+    "27": {
+        "func": "goToNextError",
+        "default": 1,
+        "bindKey": {
+            "win": "Alt-E",
+            "mac": "Ctrl-e"
+        }
+    },
+    "28": {
+        "func": "goToPreviousError",
+        "default": 1,
+        "bindKey": {
+            "win": "Alt-Shift-E",
+            "mac": "Ctrl-Shift-e"
+        }
+    },
+    "29": {
+        "func": "gotoend",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-End",
+            "mac": "Command-Down"
+        }
+    },
+    "30": {
+        "func": "gotostart",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-Home",
+            "mac": "Command-Up"
+        }
+    },
+    "31": {
+        "func": "gotolineend",
+        "default": 1,
+        "bindKey": {
+            "win": "Alt-Right",
+            "mac": "Command-Right"
+        }
+    },
+    "32": {
+        "func": "gotolinestart",
+        "default": 1,
+        "bindKey": {
+            "win": "Alt-Left",
+            "mac": "Command-Left"
+        }
+    },
+    "34": {
+        "func": "modifyNumberDown",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-Shift-Down",
+            "mac": "Alt-Shift-Down"
+        }
+    },
+    "35": {
+        "func": "modifyNumberUp",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-Shift-Up",
+            "mac": "Alt-Shift-Up"
+        }
+    },
+    "36": {
+        "func": "movelinesdown",
+        "default": 1,
+        "bindKey": {
+            "win": "Alt-Down",
+            "mac": "Option-Down"
+        }
+    },
+    "37": {
+        "func": "movelinesup",
+        "default": 1,
+        "bindKey": {
+            "win": "Alt-Up",
+            "mac": "Option-Up"
+        }
+    },
+    "39": {
+        "func": "tolowercase",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-Shift-U",
+            "mac": "Ctrl-Shift-u"
+        }
+    },
+    "40": {
+        "func": "touppercase",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-U",
+            "mac": "Ctrl-u"
+        }
+    },
+    "41": {
+        "func": "fold",
+        "default": 1,
+        "bindKey": {
+            "win": "Alt-L",
+            "mac": "Command-Alt-l"
+        }
+    },
+    "42": {
+        "func": "foldall",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-Alt-0",
+            "mac": "Ctrl-Command-Option-0"
+        }
+    },
+    "43": {
+        "func": "unfoldall",
+        "default": 1,
+        "bindKey": {
+            "win": "Alt-Shift-0",
+            "mac": "Command-Option-Shift-0"
+        }
+    },
+    "50": {
+        "func": "find",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-f",
+            "mac": "Command-f"
+        }
+    },
+    "51": {
+        "func": "findnext",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-K",
+            "mac": "Command-g"
+        }
+    },
+    "52": {
+        "func": "findprevious",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-Shift-K",
+            "mac": "Command-Shift-g"
+        }
+    },
+    "53": {
+        "func": "findAll",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-Alt-K",
+            "mac": "Ctrl-Alt-g"
+        }
+    },
+    "54": {
+        "func": "findInProject",
+        "global": 1,
+        "bindKey": {
+            "win": "Ctrl-Shift-f",
+            "mac": "Ctrl-h"
+        }
+    },
+    "55": {
+        "func": "replace",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-h",
+            "mac": "Option-Command-f"
+        }
+    },
+    "60": {
+        "func": "togglecomment",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-/",
+            "mac": "Command-/"
+        }
+    },
+    "61": {
+        "func": "toggleBlockComment",
+        "default": 1,
+        "bindKey": {
+            "win": "Ctrl-Shift-/",
+            "mac": "Shift-Command-/"
+        }
+    }
+}
