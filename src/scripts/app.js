@@ -9,7 +9,6 @@ import guide from "./components/guide.vue";
 import index from "./components/index.vue";
 import main from "./components/home.vue";
 import search from "./components/search.vue";
-import photo from "./components/photo.vue";
 import my from "./components/my.vue";
 import detail from "./components/detail.vue";
 
