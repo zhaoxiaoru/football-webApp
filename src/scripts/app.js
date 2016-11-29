@@ -12,6 +12,7 @@ import search from "./components/search.vue";
 import photo from "./components/photo.vue";
 import my from "./components/my.vue";
 import detail from "./components/detail.vue";
+import quit from "./components/quit.vue";
 
 // 在根组件加入 store，让它的子组件和 store 连接
 import store from './vuex/store';
@@ -39,6 +40,9 @@ router.map({
       },
       '/my': {
         component: my
+      },
+      '/quit': {
+        component: quit
       }
     }
   },
