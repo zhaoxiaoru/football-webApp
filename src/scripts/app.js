@@ -23,7 +23,7 @@ let router = new VueRouter();
 
 router.map({
   '/': {
-    component: guide
+    component: index    // 默认显示index
   },
   '/index': {
     component: index,
